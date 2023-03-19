@@ -1,7 +1,7 @@
 module "vpc" {
   source              = "git::https://github.com/prabhudevops123/tf-module-vpc.git"
   env                 = var.env
-#  tags                = var.tags
+  tags                = var.tags
 #  default_route_table = var.default_route_table
 #  default_vpc_id      = var.default_vpc_id
 
