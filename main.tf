@@ -18,8 +18,8 @@ module "docdb" {
 
 #  subnet_ids = local.db_subnet_ids
 #
-#  for_each                = var.docdb
-#  engine                  = each.value["engine"]
+  for_each                = var.docdb
+  engine                  = each.value["engine"]
 #  engine_version          = each.value["engine_version"]
 #  backup_retention_period = each.value["backup_retention_period"]
 #  preferred_backup_window = each.value["preferred_backup_window"]
