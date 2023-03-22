@@ -72,9 +72,9 @@ module "vpc" {
 #}
 
 
-#output "vpc" {
-#  value = module.vpc
-#}
 output "vpc" {
-  value = local.db_subnet_ids
+  value = module.vpc
 }
+#output "vpc" {
+#  value = local.db_subnet_ids
+#}
