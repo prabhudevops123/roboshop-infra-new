@@ -21,15 +21,15 @@ module "docdb" {
   for_each                = var.docdb
   engine                  = each.value["engine"]
   engine_version          = each.value["engine_version"]
-#  backup_retention_period = each.value["backup_retention_period"]
-#  preferred_backup_window = each.value["preferred_backup_window"]
+  backup_retention_period = each.value["backup_retention_period"]
+  preferred_backup_window = each.value["preferred_backup_window"]
   skip_final_snapshot     = each.value["skip_final_snapshot"]
-#  no_of_instances         = each.value["no_of_instances"]
-#  instance_class          = each.value["instance_class"]
+  no_of_instances         = each.value["no_of_instances"]
+  instance_class          = each.value["instance_class"]
 }
 
 module "rds" {
-  source = "git::https://github.com/raghudevopsb71/tf-module-rds.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-rds.git"
   env    = var.env
   tags   = var.tags
 
@@ -45,7 +45,7 @@ module "rds" {
 }
 
 module "elasticache" {
-  source = "git::https://github.com/raghudevopsb71/tf-module-elasticache.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-elasticache.git"
   env    = var.env
   tags   = var.tags
 
@@ -60,7 +60,7 @@ module "elasticache" {
 }
 
 module "rabbitmq" {
-  source = "git::https://github.com/raghudevopsb71/tf-module-rabbitmq.git"
+  source = "git::https://github.com/prabhudevops123/tf-module-rabbitmq.git"
   env    = var.env
   tags   = var.tags
 
