@@ -1,7 +1,7 @@
 env = "dev"
 
 bastion_cidr = ["172.31.1.221/32"]
-dns_domain   = "devopsprabhu.online"
+#dns_domain   = "devopsprabhu.online"
 
 vpc = {
   main = {
