@@ -118,54 +118,54 @@ apps = {
 #    port             = 8080
 #    allow_app_to     = "app"
   }
-#  cart = {
-#    component        = "cart"
-#    instance_type    = "t3.micro"
-#    desired_capacity = 1
-#    max_size         = 4
-#    min_size         = 1
-#    subnet_name      = "app"
+  cart = {
+    component        = "cart"
+    instance_type    = "t3.micro"
+    desired_capacity = 1
+    max_size         = 4
+    min_size         = 1
+    subnet_name      = "app"
 #    port             = 8080
 #    allow_app_to     = "app"
-#  }
-#  user = {
-#    component        = "user"
-#    instance_type    = "t3.micro"
-#    desired_capacity = 1
-#    max_size         = 4
-#    min_size         = 1
-#    subnet_name      = "app"
+  }
+  user = {
+    component        = "user"
+    instance_type    = "t3.micro"
+    desired_capacity = 1
+    max_size         = 4
+    min_size         = 1
+    subnet_name      = "app"
 #    port             = 8080
 #    allow_app_to     = "app"
-#  }
-#  shipping = {
-#    component        = "shipping"
-#    instance_type    = "t3.micro"
-#    desired_capacity = 1
-#    max_size         = 4
-#    min_size         = 1
-#    subnet_name      = "app"
+  }
+  shipping = {
+    component        = "shipping"
+    instance_type    = "t3.micro"
+    desired_capacity = 1
+    max_size         = 4
+    min_size         = 1
+    subnet_name      = "app"
 #    port             = 8080
 #    allow_app_to     = "app"
-#  }
-#  payment = {
-#    component        = "payment"
-#    instance_type    = "t3.micro"
-#    desired_capacity = 1
-#    max_size         = 4
-#    min_size         = 1
-#    subnet_name      = "app"
+  }
+  payment = {
+    component        = "payment"
+    instance_type    = "t3.micro"
+    desired_capacity = 1
+    max_size         = 4
+    min_size         = 1
+    subnet_name      = "app"
 #    port             = 8080
 #    allow_app_to     = "app"
-#  }
-#  frontend = {
-#    component        = "frontend"
-#    instance_type    = "t3.micro"
-#    desired_capacity = 1
-#    max_size         = 4
-#    min_size         = 1
-#    subnet_name      = "web"
+  }
+  frontend = {
+    component        = "frontend"
+    instance_type    = "t3.micro"
+    desired_capacity = 1
+    max_size         = 4
+    min_size         = 1
+    subnet_name      = "web"
 #    port             = 80
 #    allow_app_to     = "public"
-#  }
+  }
 }
