@@ -37,6 +37,7 @@ module "rds" {
   tags   = var.tags
 
   subnet_ids = local.db_subnet_ids
+  vpc_id     = module.vpc["main"].vpc_id
 
   for_each                = var.rds
   engine                  = each.value["engine"]
@@ -54,6 +55,7 @@ module "elasticache" {
   tags   = var.tags
 
   subnet_ids = local.db_subnet_ids
+  vpc_id     = module.vpc["main"].vpc_id
 
   for_each        = var.elasticache
   engine          = each.value["engine"]
@@ -70,6 +72,7 @@ module "rabbitmq" {
   tags   = var.tags
 
   subnet_ids = local.db_subnet_ids
+  vpc_id     = module.vpc["main"].vpc_id
 
   for_each      = var.rabbitmq
   instance_type = each.value["instance_type"]
