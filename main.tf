@@ -45,6 +45,7 @@ module "rds" {
   engine_version          = each.value["engine_version"]
   instance_class          = each.value["instance_class"]
   no_of_instances         = each.value["no_of_instances"]
+  allow_subnets   = lookup(local.subnet_cidr, each.value["allow_subnets"], null)
 }
 
 module "elasticache" {
@@ -59,6 +60,7 @@ module "elasticache" {
   engine_version  = each.value["engine_version"]
   num_cache_nodes = each.value["num_cache_nodes"]
   node_type       = each.value["node_type"]
+  allow_subnets   = lookup(local.subnet_cidr, each.value["allow_subnets"], null)
 
 }
 
@@ -71,6 +73,7 @@ module "rabbitmq" {
 
   for_each      = var.rabbitmq
   instance_type = each.value["instance_type"]
+  allow_subnets   = lookup(local.subnet_cidr, each.value["allow_subnets"], null)
 
 }
 
